@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Joseph Kim">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Joseph Kim</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Timeline CSS -->
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <!-- Timeline JS -->
+    <script>
+        /**********************Scroll Animation "START"************************************/
+        $(document).ready(function () {
+            var $animation_elements = $('.anim');
+            var $window = $(window);
+
+            function check_if_in_view() {
+                var window_height = $window.height();
+                var window_top_position = $window.scrollTop();
+                var window_bottom_position = (window_top_position + window_height);
+
+                $.each($animation_elements, function () {
+                    var $element = $(this);
+                    var element_height = $element.outerHeight();
+                    var element_top_position = $element.offset().top;
+                    var element_bottom_position = (element_top_position + element_height);
+
+                    //check to see if this current container is within viewport
+                    if ((element_bottom_position >= window_top_position) &&
+                        (element_top_position <= window_bottom_position)) {
+                        $element.addClass('animated');
+                    } else {
+                        $element.removeClass('animated');
+                    }
+                });
+            }
+
+            $window.on('scroll resize', check_if_in_view);
+            $window.trigger('scroll');
+        });
+        /**********************Scroll Animation "END"************************************/
+    </script>
+
+    <style>
+        html {
+            overflow: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+            /* make scrollbar transparent */
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content"
+            aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">Joseph Kim</a>
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.html">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="experience.html">Experience</a>
+                </li>
+            </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="timeline">
+                <div class="row timeline-movement timeline-movement-top">
+                    <div class="timeline-badge timeline-future-movement">
+                        <p>2019</p>
+                    </div>
+                </div>
+                <div class="row timeline-movement">
+                    <div class="col-sm-6  timeline-item">
+                        <div class="row">
+                            <div class="col-sm-11">
+                                <div class="timeline-panel credits  anim animate fadeInLeft">
+                                    <ul class="timeline-panel-ul">
+                                        <div class="lefting-wrap">
+                                            <li class="img-wraping">
+                                                <a href="https://www.soclean.com/">
+                                                    <img src="images/about/soclean.png" class="img-responsive"
+                                                        alt="user-image" />
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="righting-wrap">
+                                            <li>
+                                                <a href="https://www.soclean.com/" class="importo">SoClean Inc.</a>
+                                            </li>
+                                            <li>
+                                                <span class="causale" style="color:#000; font-weight: 600;">NetSuite
+                                                    Administrator</span>
+                                            </li>
+                                            <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                    elit. </span> </li>
+                                            <li>
+                                                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>
+                                                        13/01/2018, 13:05"</small></p>
+                                            </li>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row timeline-movement">
+                    <div class="offset-sm-6 col-sm-6  timeline-item">
+                        <div class="row">
+                            <div class="offset-sm-1 col-sm-11">
+                                <div class="timeline-panel debits  anim animate  fadeInRight">
+                                    <ul class="timeline-panel-ul">
+                                        <div class="lefting-wrap">
+                                            <li class="img-wraping"><a href="#"><img
+                                                        src="images/about/newhampshire.jpg"
+                                                        class="img-responsive" alt="user-image" /></a></li>
+                                        </div>
+                                        <div class="righting-wrap">
+                                            <li><a href="#" class="importo">...</a></li>
+                                            <li>
+                                                <span class="causale" style="color:#000; font-weight: 600;">
+                                                    Human
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="causale">
+                                                    Leaving home ain't easy, but we all gotta grow somehow...
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <small class="text-muted">
+                                                        <em>Moving forward...</em>
+                                                    </small>
+                                                </p>
+                                            </li>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row timeline-movement">
+                    <div class="col-sm-6  timeline-item">
+                        <div class="row">
+                            <div class="col-sm-11">
+                                <div class="timeline-panel credits  anim animate  fadeInLeft">
+                                    <ul class="timeline-panel-ul">
+                                        <div class="lefting-wrap">
+                                            <li class="img-wraping"><a href="#"><img
+                                                        src="images/about/taiwan.jpg"
+                                                        class="img-responsive" alt="user-image" /></a></li>
+                                        </div>
+                                        <div class="righting-wrap">
+                                            <li><a href="#" class="importo">...</a></li>
+                                            <li><span class="causale" style="color:#000; font-weight: 600;">
+                                                Human
+                                                </span> </li>
+                                            <li>
+                                                <span class="causale">
+                                                    Fondest moments. Cherished memories. The birth of passion & purpose.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <small class="text-muted">
+                                                        <em>The end of something amazing...</em>
+                                                    </small>
+                                                </p>
+                                            </li>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row timeline-movement timeline-movement-top">
+                    <div class="timeline-badge timeline-future-movement">
+                        <p>2018</p>
+                    </div>
+                </div>
+
+                <div class="row timeline-movement">
+                    <div class="offset-sm-6 col-sm-6  timeline-item">
+                        <div class="row">
+                            <div class="offset-sm-1 col-sm-11">
+                                <div class="timeline-panel debits  anim animate  fadeInRight">
+                                    <ul class="timeline-panel-ul">
+                                        <div class="lefting-wrap">
+                                            <li class="img-wraping"><a href="https://amplifysnackbrands.com/">
+                                                    <img src="images/about/hershey.png" class="img-responsive"
+                                                        alt="user-image" />
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="righting-wrap">
+                                            <li>
+                                                <a href="https://amplifysnackbrands.com/" class="importo">The Hershey
+                                                    Company</a>
+                                            </li>
+                                            <li>
+                                                <span class="causale"
+                                                    style="color:#000; font-weight: 600;">Developer</span>
+                                            </li>
+                                            <li>
+                                                <span class="causale">
+                                                    <a href="https://www.cnbc.com/2017/12/18/hershey-in-1-point-6-billion-deal-to-acquire-skinnypop-parent-amplify.html">
+                                                        Hershey's acquisition of Amplify Snack Brands
+                                                    </a>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <small class="text-muted">
+                                                        <em>The beginning of a journey...</em>
+                                                    </small>
+                                                </p>
+                                            </li>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row timeline-movement">
+                    <div class="col-sm-6  timeline-item">
+                        <div class="row">
+                            <div class="col-sm-11">
+                                <div class="timeline-panel credits  anim animate  fadeInLeft">
+                                    <ul class="timeline-panel-ul">
+                                        <div class="lefting-wrap">
+                                            <li class="img-wraping"><a href="#"><img
+                                                        src="images/about/aiesec.png"
+                                                        class="img-responsive" alt="user-image" /></a></li>
+                                        </div>
+                                        <div class="righting-wrap">
+                                            <li><a href="#" class="importo">AIESEC Austin</a></li>
+                                            <li>
+                                                <span class="causale" style="color:#000; font-weight: 600;">
+                                                    Talent Management Organization Member
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="causale">
+                                                    We strive to achieve Peace and Fulfillment of Humankind's Potential.
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <small class="text-muted">
+                                                        <em>Shoutout to #TMT!</em>
+                                                    </small>
+                                                </p>
+                                            </li>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row timeline-movement timeline-movement-top">
+                    <div class="timeline-badge timeline-future-movement">
+                        <p>2017</p>
+                    </div>
+                </div>
+
+                <div class="row timeline-movement">
+                    <div class="offset-sm-6 col-sm-6  timeline-item">
+                        <div class="row">
+                            <div class="offset-sm-1 col-sm-11">
+                                <div class="timeline-panel debits  anim animate  fadeInRight">
+                                    <ul class="timeline-panel-ul">
+                                        <div class="lefting-wrap">
+                                            <li class="img-wraping">
+                                                <a href="https://texaspanicroom.com/">
+                                                    <img src="images/about/tpr.png" class="img-responsive"
+                                                        alt="user-image" />
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="righting-wrap">
+                                            <li>
+                                                <a href="https://texaspanicroom.com/" class="importo">Texas Panic
+                                                    Room</a>
+                                            </li>
+                                            <li>
+                                                <span class="causale"
+                                                    style="color:#000; font-weight: 600;">Co-Owner</span>
+                                            </li>
+                                            <li>
+                                                <span class="causale">
+                                                    Embracing Austin's Entrepreneurial Spirit
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <small class="text-muted">
+                                                        <em>Keep Austin Weird!</em>
+                                                    </small>
+                                                </p>
+                                            </li>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row timeline-movement">
+                    <div class="col-sm-6  timeline-item">
+                        <div class="row">
+                            <div class="col-sm-11">
+                                <div class="timeline-panel credits  anim animate  fadeInLeft">
+                                    <ul class="timeline-panel-ul">
+                                        <div class="lefting-wrap">
+                                            <li class="img-wraping"><a href="#"><img src="images/about/mccombs.jpg"
+                                                        class="img-responsive" alt="user-image" /></a></li>
+                                        </div>
+                                        <div class="righting-wrap">
+                                            <li><a href="#" class="importo">University of Texas at Austin</a></li>
+                                            <li><span class="causale" style="color:#000; font-weight: 600;">Student
+                                                </span> </li>
+                                            <li>
+                                                <span class="causale">
+                                                    Bachelor of Business Administration, MIS
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <small class="text-muted">
+                                                        <em>Hook 'em Horns</em>
+                                                    </small>
+                                                </p>
+                                            </li>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mastfoot mt-auto" style="text-align: center;">
+        <div class="inner">
+            <p>© Joseph Kim, 2018. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
